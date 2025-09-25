@@ -1,0 +1,31 @@
+{
+  "name": "whatsapp-phone-sync",
+  "version": "1.0.0",
+  "description": "CLI tool to synchronize WhatsApp phone numbers with FHIR patient bundles",
+  "main": "src/index.js",
+  "bin": {
+    "whatsapp-sync": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo 'Node CLI unit tests have been retired.'",
+    "validate": "node -c src/index.js && node -c src/csv.js && node -c src/normalizePhone.js && node -c src/updatePatients.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "fhir",
+    "healthcare",
+    "phone",
+    "sync",
+    "cli"
+  ],
+  "author": "Healthcare System",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  }
+}

@@ -1,0 +1,33 @@
+```mermaid
+flowchart TB
+    subgraph Hosting
+        VM[Docker/Kubernetes VM]
+        n8n[n8n Server]
+    end
+    subgraph Scaling
+        Split[Split In Batches]
+        Parallel[Parallel HTTP Nodes]
+    end
+    subgraph Observability
+        Logs[Execution Log]
+        Metrics[Custom Metrics]
+        Alerts[Slack/Email]
+    end
+    subgraph Rerun
+        UI[Web UI Button]
+        API[REST Trigger]
+    end
+
+    VM --> n8n
+    n8n --> Split
+    Split --> Parallel
+    Parallel --> FHIR[FHIR API]
+    n8n --> Logs
+    Logs --> Metrics
+    Metrics --> Alerts
+    Alerts --> Ops[On-call]
+    n8n --> UI
+    UI --> RerunTarget[(targetDate input)]
+    API --> RerunTarget
+    RerunTarget --> n8n
+```

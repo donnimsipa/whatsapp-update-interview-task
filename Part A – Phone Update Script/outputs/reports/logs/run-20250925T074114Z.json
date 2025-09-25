@@ -1,0 +1,103 @@
+{
+  "run_id": "20250925T074114Z",
+  "start_iso": "2025-09-25T07:41:14Z",
+  "end_iso": "2025-09-25T08:11:19Z",
+  "start_epoch": 1758786074,
+  "end_epoch": 1758787879,
+  "duration_seconds": 1805,
+  "success_count": 10,
+  "failure_count": 0,
+  "notes": [],
+  "tasks": [
+    {
+      "name": "Go validation",
+      "status": "success",
+      "note": "",
+      "start_iso": "2025-09-25T07:41:14Z",
+      "end_iso": "2025-09-25T07:41:14Z",
+      "duration_seconds": 0,
+      "exit_code": 0
+    },
+    {
+      "name": "Go invalid stress",
+      "status": "success",
+      "note": "",
+      "start_iso": "2025-09-25T07:41:14Z",
+      "end_iso": "2025-09-25T07:41:15Z",
+      "duration_seconds": 1,
+      "exit_code": 0
+    },
+    {
+      "name": "Go mixed stress",
+      "status": "success",
+      "note": "",
+      "start_iso": "2025-09-25T07:41:15Z",
+      "end_iso": "2025-09-25T07:41:16Z",
+      "duration_seconds": 1,
+      "exit_code": 0
+    },
+    {
+      "name": "Go nominal performance",
+      "status": "success",
+      "note": "",
+      "start_iso": "2025-09-25T07:41:16Z",
+      "end_iso": "2025-09-25T07:41:18Z",
+      "duration_seconds": 2,
+      "exit_code": 0
+    },
+    {
+      "name": "Go extreme performance",
+      "status": "success",
+      "note": "",
+      "start_iso": "2025-09-25T07:41:18Z",
+      "end_iso": "2025-09-25T08:05:07Z",
+      "duration_seconds": 1429,
+      "exit_code": 0
+    },
+    {
+      "name": "Node validation",
+      "status": "success",
+      "note": "",
+      "start_iso": "2025-09-25T08:05:07Z",
+      "end_iso": "2025-09-25T08:05:08Z",
+      "duration_seconds": 1,
+      "exit_code": 0
+    },
+    {
+      "name": "Node invalid stress",
+      "status": "success",
+      "note": "",
+      "start_iso": "2025-09-25T08:05:08Z",
+      "end_iso": "2025-09-25T08:05:09Z",
+      "duration_seconds": 1,
+      "exit_code": 0
+    },
+    {
+      "name": "Node mixed stress",
+      "status": "success",
+      "note": "",
+      "start_iso": "2025-09-25T08:05:09Z",
+      "end_iso": "2025-09-25T08:05:10Z",
+      "duration_seconds": 1,
+      "exit_code": 0
+    },
+    {
+      "name": "Node nominal performance",
+      "status": "success",
+      "note": "",
+      "start_iso": "2025-09-25T08:05:10Z",
+      "end_iso": "2025-09-25T08:05:12Z",
+      "duration_seconds": 2,
+      "exit_code": 0
+    },
+    {
+      "name": "Node extreme performance",
+      "status": "success",
+      "note": "",
+      "start_iso": "2025-09-25T08:05:12Z",
+      "end_iso": "2025-09-25T08:11:19Z",
+      "duration_seconds": 367,
+      "exit_code": 0
+    }
+  ]
+}

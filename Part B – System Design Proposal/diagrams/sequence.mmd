@@ -1,0 +1,24 @@
+```mermaid
+sequenceDiagram
+    participant Cron as Cron Trigger
+    participant n8n as n8n Workflow
+    participant Sheets as Google Sheets CSV
+    participant Queue as Batch Loop
+    participant FHIR as FHIR API
+    participant Alert as Alerts/Dashboard
+
+    Cron->>n8n: Start workflow (targetDate=today)
+    n8n->>Sheets: Download CSV export
+    n8n->>n8n: Parse & normalize rows
+    n8n->>Queue: SplitInBatches (200 rows)
+    loop For each batch
+        Queue->>FHIR: GET Patient?identifier=NIK
+        Queue->>FHIR: PATCH telecom (phone update)
+        alt update fails
+            Queue->>Alert: Log failure & enqueue in DLQ
+        else update succeeds
+            Queue->>n8n: Record success metrics
+        end
+    end
+    n8n->>Alert: Post run summary (processed/skipped/failed)
+```
