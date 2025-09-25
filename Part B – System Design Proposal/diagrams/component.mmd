@@ -1,4 +1,3 @@
-```mermaid
 flowchart LR
     Cron[Cron Trigger 23:00] --> Ingestion[Google Sheet CSV Download]
     Ingestion --> Normalize[Validate & Normalize Phones]
@@ -7,4 +6,3 @@ flowchart LR
     Queue --> FHIR[FHIR Update (HTTP PATCH)]
     FHIR --> Logs[Metrics & Logs]
     Logs --> Dashboard[Ops Dashboard]
-```
