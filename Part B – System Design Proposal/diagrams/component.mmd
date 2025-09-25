@@ -1,4 +1,4 @@
-%%{init: {'theme': 'forest', 'logLevel': 'fatal', 'themeVariables': { 'primaryColor': '#1f2937', 'primaryBorderColor': '#10b981', 'primaryTextColor': '#ecfeff', 'lineColor': '#10b981', 'tertiaryColor': '#111827'}}}%%
+%%{init: {'theme': 'forest', 'logLevel': 'fatal', 'themeVariables': { 'primaryColor': '#1f2937', 'primaryBorderColor': '#10b981', 'primaryTextColor': '#ecfeff', 'lineColor': '#10b981', 'background': '#0b1120', 'tertiaryColor': '#111827'}}}%%
 flowchart LR
     Cron[Cron Trigger 23:00] --> Ingestion[Google Sheet CSV Download]
     Ingestion --> Normalize[Validate & Normalize Phones]
