@@ -1,8 +1,9 @@
+%%{init: {'theme': 'forest', 'logLevel': 'fatal', 'themeVariables': { 'primaryColor': '#1f2937', 'primaryBorderColor': '#10b981', 'primaryTextColor': '#ecfeff', 'lineColor': '#10b981', 'tertiaryColor': '#111827'}}}%%
 flowchart LR
     Cron[Cron Trigger 23:00] --> Ingestion[Google Sheet CSV Download]
     Ingestion --> Normalize[Validate & Normalize Phones]
     Normalize -->|Valid rows| Queue[(Batched Processing)]
     Normalize -->|Invalid rows| DLQ[DLQ Sheet / Alert]
-    Queue --> FHIR[FHIR Update (HTTP PATCH)]
+    Queue --> FHIR[FHIR Update - HTTP PATCH]
     FHIR --> Logs[Metrics & Logs]
     Logs --> Dashboard[Ops Dashboard]
