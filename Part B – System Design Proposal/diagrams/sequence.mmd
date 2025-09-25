@@ -9,6 +9,7 @@ sequenceDiagram
 
     Cron->>n8n: Start workflow (targetDate=today)
     n8n->>Sheets: Download CSV export
+    sheets->>n8n: Store in context
     n8n->>n8n: Parse & normalize rows
     n8n->>Queue: SplitInBatches (200 rows)
     loop For each batch
